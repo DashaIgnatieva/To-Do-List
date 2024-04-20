@@ -121,10 +121,6 @@ h1 {
     border: none;
 }
 
-.mark:hover {
-    box-shadow: var(--shadow);
-}
-
 .mark:active {
     transform: scale(0.80);
 }
@@ -219,10 +215,6 @@ input:focus {
     transition-duration: 0;
 }
 
-.add-task:hover {
-    background-color: #c43d75;
-}
-
 .add-task:active {
     transform: scale(0.95);
 }
@@ -242,10 +234,22 @@ input:focus {
     transition-duration: 0;
 }
 
-.delete-completed-tasks:hover {
-    background-color: rgb(28, 31, 32);
-}
-
 .delete-completed-tasks:active {
     transform: scale(0.95);
+}
+
+/*Медиазапрос для устройств способных использовать hover*/
+@media (hover: hover) {
+    .mark:hover {
+        box-shadow: var(--shadow);
+    }
+
+    .add-task:hover {
+        background-color: #c43d75;
+    }
+
+    .delete-completed-tasks:hover {
+        background-color: rgb(28, 31, 32);
+    }
+    
 }
