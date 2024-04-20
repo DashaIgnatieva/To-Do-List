@@ -18,13 +18,23 @@
     }
 
     /*Секция с добавлением задачи*/
+    /* .add-todo-section {
+        padding-bottom: 5px;
+    } */
+    /*Секция ввода задачи*/
+    input {
+        height: 40px;
+    }
+
     /*Кнопка добавления задачи*/
     .add-todo-section {
         margin-bottom: 10px;
     }
 
     .add-task {
+        height: 40px;
         width: 100%;
+        font-size: 16px;
     }
 
     /*Кнопка удаления выполненых задач*/
@@ -33,6 +43,7 @@
     }
 
     .delete-completed-tasks {
+        font-size: 16px;
         width: 100%;
     }
 }

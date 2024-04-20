@@ -32,7 +32,7 @@ const addTask = (event) => {
     /*Создаем объект задачи*/
     const newTask = {
         id: Date.now(), //Формируем id задачи исходя из текущей даты, включая милесекунды TODO Переделать
-        text: taskText, // Текст задачи
+        text: taskText,
         done: false // Статус задачи. В момент создания равен false
     };
 
@@ -138,6 +138,7 @@ const showFoolTaskText = (event) => {
     const parentNode = event.target.closest('.task');
     parentNode.classList.toggle('fool-task');
 };
+
 /*Переменная которая будет хранить массив задач*/
 let tasks = {};
 

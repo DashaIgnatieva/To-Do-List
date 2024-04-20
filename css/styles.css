@@ -170,7 +170,6 @@ h1 {
 
 /*секция для добавления задачи*/
 .add-todo-section {
-    height: 170px;
     background-color: white;
     margin-bottom: 20px;
     border-radius: 3px;
@@ -225,8 +224,6 @@ input:focus {
 }
 
 .add-task:active {
-    width: 96px;
-    height: 32px;
     transform: scale(0.95);
 }
 
