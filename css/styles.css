@@ -1,0 +1,254 @@
+@font-face {
+    font-family: Roboto;
+    font-weight: 500;
+    src: url(../assets/fonts/Roboto-Medium.woff);
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 300;
+    src: url(../assets/fonts/Roboto-Light.woff);
+}
+
+:root {
+    /*
+    Цвет нижней границы у задачь
+    Хедер в секции с добавление задачи
+    обводка у поля ввода задачи
+    */
+    --neutral-color: #dbeefc;
+    --shadow: 0px 0px 7px #b4c6d3;
+    /*Цвет текста и картинки в пустом списке задачь*/
+    --empty-list-color: #c3d5e2;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    background-image: linear-gradient(45deg, #F7CDDB, #ADD2F1);
+    font-family: Roboto, sans-serif;
+    color: rgb(26, 26, 26);
+    margin: 0%;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+/*Стили контейнера с задачами*/
+.todo-list {
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 3px;
+}
+
+/*Стили отдельной задачи*/
+.task {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--neutral-color);
+    padding: 10px 20px;
+    position: relative;
+}
+
+.task-discription {
+    white-space: nowrap;
+    overflow-x: hidden; 
+}
+
+.task-discription p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*Задача в фокусе*/
+.fool-task {
+    height: auto;
+}
+
+.fool-task div.task-discription {
+    white-space: normal;
+}
+
+.fool-task p {
+    overflow: visible;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+}
+
+/*Стили последней задачи*/
+.todo-list > div:last-child {
+    border: none;
+}
+
+/*Метки выполненой и не выполненой задачи*/
+.marks {
+    display: flex;
+    right: 20px;
+}
+
+.mark {
+    height: 20px;
+    width: 20px;
+    background-color: var(--neutral-color);
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+    background-size: cover;
+    box-sizing: border-box;
+    transition-duration: 0;
+    border: none;
+}
+
+.mark:hover {
+    box-shadow: var(--shadow);
+}
+
+.mark:active {
+    transform: scale(0.80);
+}
+
+.tick {
+    background-image: url(../assets/images/tick.png);
+}
+
+.cross {
+    background-image: url(../assets/images/cross.png);
+}
+
+/*Стили выполненой, но не удаленной задачи*/
+.task-done {
+    text-decoration: line-through;
+    color: var(--empty-list-color);
+}
+
+/*Пустой список задач*/
+.empty-list {
+    padding: 20px;
+}
+
+.img {
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    background-color: var(--empty-list-color);
+    mask-image: url("../assets/images/where.svg");
+}
+
+.empty-list > p {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--empty-list-color);
+}
+
+/*Сокрытие блока "Список задачь пуст" при добавлении задачи*/
+.none {
+    display: none !important;
+}
+
+/*секция для добавления задачи*/
+.add-todo-section {
+    height: 170px;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: var(--neutral-color);
+    border-bottom: 1px solid #cfdee9;
+    padding: 10px 20px;
+    border-radius: 3px 3px 0 0;
+}
+
+.add-section {
+    padding: 20px;
+    color: #aebcc7;
+}
+
+.add-section > p {
+    font-size: 10px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border: 1px solid var(--neutral-color);
+    border-radius: 3px;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: var(--shadow);
+}
+
+/*Кнопка добавления задачи*/
+.add-task {
+    color: white;
+    background-color: #ec5889;
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition-duration: 0;
+}
+
+.add-task:hover {
+    background-color: #c43d75;
+}
+
+.add-task:active {
+    width: 96px;
+    height: 32px;
+    transform: scale(0.95);
+}
+
+/*Кнопка удаления выполненых задач*/
+.del-button-plase {
+    display: flex;
+    justify-content: end;
+}
+
+.delete-completed-tasks {
+    color: white;
+    padding: 8px 15px;
+    background-color: rgb(55, 61, 63);
+    border: none;
+    border-radius: 5px;
+    transition-duration: 0;
+}
+
+.delete-completed-tasks:hover {
+    background-color: rgb(28, 31, 32);
+}
+
+.delete-completed-tasks:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="список, список дел, to do list, to do лист, список задач, список покупок, приложение для списка покупок, приложение для списка дел">
+    <meta name="description" content="Браузерное приложение для составления различных списков: списка дел, списка покупок, списка книг которых нужно прочитать">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="assets/images/tick.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    
+    <title>Мой Список</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Мой Список</h1>
+        <p>все по пунктам</p>
+        <div class="todo-list" id="tasks-list">
+        </div>
+        <!-- Form -->
+        <div class="add-todo-section">
+            <div class="header">
+                <p>Добавить пункт списка</p>
+            </div>
+            <form class="add-section" id="form">
+                <input type="text" placeholder="Впишите ваш текст сюда" id="task-input">
+                <p>Составьте список покупок, или план по захвату мира</p>
+                <button class="add-task">Добавить</button>
+            </form>
+        </div>
+        <!-- End form -->
+        <div class="del-button-plase">
+            <button class="delete-completed-tasks" id="delete-completed-tasks">Удалить выполненые пункты</button>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

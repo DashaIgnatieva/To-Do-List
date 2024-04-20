@@ -1,0 +1,38 @@
+/*Стили для мобильной версии приложения*/
+@media screen and (max-width: 430px) {
+
+    .container {
+        width: 90%;
+    }
+
+    h1, h1 + p {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h1 + p {
+        font-size: 20px;
+    }
+
+    /*Секция с добавлением задачи*/
+    /*Кнопка добавления задачи*/
+    .add-todo-section {
+        margin-bottom: 10px;
+    }
+
+    .add-task {
+        width: 100%;
+    }
+
+    /*Кнопка удаления выполненых задач*/
+    .del-button-plase {
+        justify-content: center;
+    }
+
+    .delete-completed-tasks {
+        width: 100%;
+    }
+}
