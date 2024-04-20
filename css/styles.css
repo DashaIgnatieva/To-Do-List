@@ -239,7 +239,7 @@ input:focus {
 }
 
 /*Медиазапрос для устройств способных использовать hover*/
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
     .mark:hover {
         box-shadow: var(--shadow);
     }
