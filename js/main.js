@@ -89,6 +89,8 @@ const deleteAllDoneTasks = (event) => {
             saveToLocalStorage();
         };
     };
+
+    checkEmptyList();
 };
 
 /*Функция для отметки задачи как выполненной*/

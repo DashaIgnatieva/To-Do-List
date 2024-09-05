@@ -20,6 +20,7 @@
     --shadow: 0px 0px 7px #b4c6d3;
     /*Цвет текста и картинки в пустом списке задачь*/
     --empty-list-color: #c3d5e2;
+    --animation-speed: 1s;
 }
 
 html, body {
@@ -212,7 +213,7 @@ input:focus {
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-    transition-duration: 0;
+    transition-duration: var(--animation-speed);
 }
 
 .add-task:active {
@@ -231,7 +232,7 @@ input:focus {
     background-color: rgb(55, 61, 63);
     border: none;
     border-radius: 5px;
-    transition-duration: 0;
+    transition-duration: var(--animation-speed);
 }
 
 .delete-completed-tasks:active {
@@ -251,5 +252,4 @@ input:focus {
     .delete-completed-tasks:hover {
         background-color: rgb(28, 31, 32);
     }
-    
 }
